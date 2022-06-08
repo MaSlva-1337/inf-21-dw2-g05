@@ -12,4 +12,5 @@ Criamos a rota de users com os seguintes endpoints:
 /users/:id - Delete recebendo o id do utilizador como parâmetro para apagar um utilizador em específico;
 /users - Patch para poder atualizar os parâmetros de um utilizador em específico escolhido através do id; 
 
-Todo o código utilizado na criação dos endpoints da API está numa pasta denominada Controllers no ficheiro users.js sendo o código de cada endpoint exportado posteriormente para a pasta routes nomeadamente no ficheiro users.js.
+Autenticação
+Para esta ser feita foi necessário criar uma auth aplication no github e obter credencias que depois foram colocadas no ficheiro com código.
