@@ -25,16 +25,18 @@ Criação das tabelas
 
 API
 
-Para a API forma utilizados os packages expressI e o Mysql.
-Criamos a rota de users com os seguintes endpoints:
-/users - Get para apresentar todos os utilizadores;
-/users - Post para a criação de um novo utilizador;
-/users/:id - Get para procurar informações sobre o utilizador através do seu id;
-/users/:id - Delete recebendo o id do utilizador como parâmetro para apagar um utilizador em específico;
-/users - Patch para poder atualizar os parâmetros de um utilizador em específico escolhido através do id; 
+    Para a API forma utilizados os packages expressI e o Mysql.
+    Criamos a rota de users com os seguintes endpoints:
+    /users - Get para apresentar todos os utilizadores;
+    /users - Post para a criação de um novo utilizador;
+    /users/:id - Get para procurar informações sobre o utilizador através do seu id;
+    /users/:id - Delete recebendo o id do utilizador como parâmetro para apagar um utilizador em específico;
+    /users - Patch para poder atualizar os parâmetros de um utilizador em específico escolhido através do id; 
 
 Autenticação
-Para esta ser feita foi necessário criar uma auth aplication no github e obter credencias que depois foram colocadas no ficheiro com código.
+
+    Para esta ser feita foi necessário criar uma auth aplication no github e obter credencias que depois foram colocadas no ficheiro com código.
 
 React APP
-Para criar a react app foi necessário criar uma pasta nova. Nesta há outras pastas tais como a Components aonde estão todos os componentes necessários para a criação de um ui. Na criação da ui optou-se por utilizar o semantic-ui que está encarregado de tratar da ui. 
+
+    Para criar a react app foi necessário criar uma pasta nova. Nesta há outras pastas tais como a Components aonde estão todos os componentes necessários para a       criação de um ui. Na criação da ui optou-se por utilizar o semantic-ui que está encarregado de tratar da ui. 
