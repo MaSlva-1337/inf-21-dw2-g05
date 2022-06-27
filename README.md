@@ -25,7 +25,7 @@ Criação das tabelas
 
 API
 
-  Recurso utilizadores
+    Recurso utilizadores
     Para a API foram utilizados os packages expressI e o Mysql.
     Criamos a rota de users com os seguintes endpoints:
     /users - Get para apresentar todos os utilizadores;
@@ -34,7 +34,7 @@ API
     /users/:id - Delete recebendo o id do utilizador como parâmetro para apagar um utilizador em específico;
     /users - Patch para poder atualizar os parâmetros de um utilizador em específico escolhido através do id;
     
-  Recurso posts dos utilizadores
+    Recurso posts dos utilizadores
     Para a API foram posts os packages expressI e o Mysql.
     Foi criada a rota de posts com os seguintes endpoints:
     /posts - Get para apresentar todos os posts;
