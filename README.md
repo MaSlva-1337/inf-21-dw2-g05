@@ -25,14 +25,25 @@ Criação das tabelas
 
 API
 
-    Para a API forma utilizados os packages expressI e o Mysql.
+  Recurso utilizadores
+    Para a API foram utilizados os packages expressI e o Mysql.
     Criamos a rota de users com os seguintes endpoints:
     /users - Get para apresentar todos os utilizadores;
     /users - Post para a criação de um novo utilizador;
     /users/:id - Get para procurar informações sobre o utilizador através do seu id;
     /users/:id - Delete recebendo o id do utilizador como parâmetro para apagar um utilizador em específico;
-    /users - Patch para poder atualizar os parâmetros de um utilizador em específico escolhido através do id; 
-
+    /users - Patch para poder atualizar os parâmetros de um utilizador em específico escolhido através do id;
+    
+  Recurso posts dos utilizadores
+    Para a API foram posts os packages expressI e o Mysql.
+    Foi criada a rota de posts com os seguintes endpoints:
+    /posts - Get para apresentar todos os posts;
+    /posts - Post para a criação de um novo post;
+    /posts/:id - Get para procurar informações sobre o post através do seu id;
+    /posts/:id - Delete recebendo o id do post como parâmetro para apagar um post em específico;
+    /posts - Patch para poder atualizar os parâmetros de um post em específico escolhido através do id;
+    
+    
 Autenticação
 
     Para esta ser feita foi necessário criar uma auth aplication no github e obter credencias que depois foram colocadas no ficheiro com código.
