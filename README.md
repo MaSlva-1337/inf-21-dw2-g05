@@ -4,6 +4,7 @@ Mysql
 Inicialização
 
     Começou-se por instalar my sql(workbench) no computador e de seguida o servidor foi instalado;
+    Configuração da base de dados: pasta API/config/db.config.js
 
 Criação do schema
 
