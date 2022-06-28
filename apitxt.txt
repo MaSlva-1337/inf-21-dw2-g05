@@ -1,0 +1,433 @@
+openapi: 3.0.0
+info:
+  title: Users
+  description: User and Post API
+  contact:
+    name: my student id
+    email: my.student.email@intitution.country
+  version: 0.0.1
+servers:
+- url: http://localhost:8080
+  description: My localhost
+  variables:
+    basePath:
+      default: /
+paths:
+  /users:
+    get:
+      tags:
+      - UsersController
+      summary: Retrieve users
+      operationId: retrieveUsers
+      responses:
+        "200":
+          description: Array of users model instances
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
+                x-content-type: application/json
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/inline_response_200'
+      x-swagger-router-controller: UsersController
+    post:
+      tags:
+      - UsersController
+      summary: Create user
+      operationId: createUser
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+            examples:
+              UserExample01:
+                $ref: '#/components/examples/UserExample01'
+              UserExample02:
+                $ref: '#/components/examples/UserExample02'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/User'
+            examples:
+              UsernExample01:
+                $ref: '#/components/examples/UserExample01'
+              UserExample02:
+                $ref: '#/components/examples/UserExample02'
+      responses:
+        "200":
+          description: Create a User model instance
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/User'
+        "400":
+          description: Bad request
+      x-swagger-router-controller: UsersController
+  /users/{id}:
+    get:
+      tags:
+      - UsersController
+      summary: Retrieve User
+      operationId: retrieveUser
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          minimum: 1
+          type: integer
+          format: int64
+        examples:
+          one:
+            summary: Retrieve User id 1
+            value: 1
+          two:
+            summary: Retrieve User id 2
+            value: 2
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/User'
+        "400":
+          description: Bad request
+        "404":
+          description: id not found
+      x-swagger-router-controller: UsersController
+    put:
+      tags:
+      - UsersController
+      summary: Update user
+      operationId: updateUser
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          minimum: 1
+          type: integer
+          format: int64
+        examples:
+          one:
+            summary: Update User id 1
+            value: 1
+          two:
+            summary: Update User id 2
+            value: 2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+            examples:
+              UserExample01:
+                $ref: '#/components/examples/UserExample01'
+              UserExample02:
+                $ref: '#/components/examples/UserExample02'
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                description: User PUT success
+                x-content-type: application/json
+        "400":
+          description: Bad request
+        "404":
+          description: id not found
+      x-swagger-router-controller: UsersController
+    delete:
+      tags:
+      - UsersController
+      summary: Delete user
+      operationId: deleteUser
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          minimum: 1
+          type: integer
+          format: int64
+        examples:
+          one:
+            summary: Delete User id 1
+            value: 1
+          two:
+            summary: Delete User id 2
+            value: 2
+      responses:
+        "204":
+          description: No Content
+        "404":
+          description: id not found
+      x-swagger-router-controller: UsersController
+  /posts:
+    get:
+      tags:
+      - PostsController
+      summary: Retrieve posts
+      operationId: retrievePosts
+      responses:
+        "200":
+          description: Array of Post model instances
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Post'
+                x-content-type: application/json
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/inline_response_200_1'
+      x-swagger-router-controller: PostsController
+    post:
+      tags:
+      - PostsController
+      summary: Create post
+      operationId: createPost
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Post'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/Post'
+      responses:
+        "200":
+          description: Create a Post model instance
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Post'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/Post'
+        "400":
+          description: Bad request
+      x-swagger-router-controller: PostsController
+  /posts/{id}:
+    get:
+      tags:
+      - PostsController
+      summary: Retrieve post
+      operationId: retrievePost
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          minimum: 1
+          type: integer
+          format: int64
+        examples:
+          one:
+            summary: Retrieve Post id 1
+            value: 1
+          two:
+            summary: Retrieve Post id 2
+            value: 2
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Post'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/Post'
+        "400":
+          description: Bad request
+        "404":
+          description: id not found
+      x-swagger-router-controller: PostsController
+    put:
+      tags:
+      - PostsController
+      summary: Update post
+      operationId: updatePost
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          minimum: 1
+          type: integer
+          format: int64
+        examples:
+          one:
+            summary: Update Post id 1
+            value: 1
+          two:
+            summary: Update Post id 2
+            value: 2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Post'
+            examples:
+              PostExample01:
+                $ref: '#/components/examples/PostExample01'
+              PostExample02:
+                $ref: '#/components/examples/PostExample02'
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                description: Post PUT success
+                x-content-type: application/json
+        "400":
+          description: Bad request
+        "404":
+          description: id not found
+      x-swagger-router-controller: PostsController
+    delete:
+      tags:
+      - PostsController
+      summary: Delete post
+      operationId: deletePost
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          minimum: 1
+          type: integer
+          format: int64
+        examples:
+          one:
+            summary: Delete Post id 1
+            value: 1
+          two:
+            summary: Delete Post id 2
+            value: 2
+      responses:
+        "204":
+          description: No Content
+        "404":
+          description: id not found
+      x-swagger-router-controller: PostsController
+components:
+  schemas:
+    Post:
+      title: Post
+      required:
+      - id
+      - userId
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        text:
+          type: string
+        userId:
+          type: integer
+      additionalProperties: false
+      example:
+        id: 0
+        text: text
+        userId: 6
+    User:
+      title: User
+      required:
+      - age
+      - id
+      - lastName
+      - name
+      - postId
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        lastName:
+          type: string
+        age:
+          type: integer
+        postId:
+          type: integer
+      additionalProperties: false
+      example:
+        lastName: lastName
+        name: name
+        id: 0
+        postId: 1
+        age: 6
+    inline_response_200:
+      type: object
+      properties:
+        User:
+          type: array
+          items:
+            $ref: '#/components/schemas/User'
+      xml:
+        name: Users
+    inline_response_200_1:
+      type: object
+      properties:
+        Schedule:
+          type: array
+          items:
+            $ref: '#/components/schemas/Post'
+      xml:
+        name: schedules
+  examples:
+    PostExample01:
+      value:
+        id: 1
+        text: Post 01
+        userId: My Post for this year
+    PostExample02:
+      value:
+        id: 2
+        text: Post 02
+        userId: My Post for next year
+    UserExample01:
+      value:
+        id: 1
+        name: Jervásio
+        lastName: Cabeçadas
+        age: 20
+        postId: 1
+    UserExample02:
+      value:
+        id: 2
+        name: Gilberto
+        lastName: Aguiar-Mota
+        age: 21
+        postId: 2
