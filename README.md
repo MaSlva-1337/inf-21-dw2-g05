@@ -50,4 +50,10 @@ Autenticação
 
 React APP
 
-    Para criar a react app foi necessário criar uma pasta nova. Nesta há outras pastas tais como a Components aonde estão todos os componentes necessários para a       criação de um ui. Na criação da ui optou-se por utilizar o semantic-ui que está encarregado de tratar da ui. 
+    Para criar a react app foi necessário criar uma pasta nova. Nesta há outras pastas tais como a Components aonde estão todos os componentes necessários para a       criação de um ui. Nesta app são apresentados os utilizadores com id nome, apelido e idade estes são adicionados à base de dados usersdb à tabela usertab.
+    
+    A React APP tem os seguintes endpoints
+    /create para criar utilizadores na base de dados;
+    /users para apresentar os utilizadores na base de dados;
+    /update para atualizar a idade dos utilizadores na base de dados;
+    /delete/:id para apagar um utilizador sabendo o seu id na base de dados;
