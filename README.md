@@ -62,4 +62,5 @@ React APP
     Para o utilizador aceder aos recursos na aplicação o utilizador tem que se autenticar só depois de fazer este processo é que o mesmo pode aceder aos recursos.
     
 Autenticação: REACT APP 
+
     Para que esta funcionalidade fosse implementada foi necessário criar outra oauth application no github e obter as credencias que foram colocadas no ficheiro com     código.
