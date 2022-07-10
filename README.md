@@ -59,7 +59,7 @@ React APP
     /update para atualizar a idade dos utilizadores na base de dados;
     /delete/:id para apagar um utilizador sabendo o seu id na base de dados;
     
-    Para o utilizador aceder aos recursos na aplicação o utilizador tem que se autenticar só depois de fazer este processo é que o mesmo pode aceder aos recursos.
+    Para o utilizador aceder aos recursos na aplicação o utilizador tem de se autenticar só depois de fazer este processo é que o mesmo pode aceder aos recursos.
     
 Autenticação: REACT APP 
 
